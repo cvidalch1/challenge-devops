@@ -29,7 +29,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      name: Default
+      name: demo
       demands:
       - agent.name -equals demo  
     steps:
