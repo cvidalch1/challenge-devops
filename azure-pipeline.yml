@@ -11,7 +11,7 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'challenge-devops-aks'
+  dockerRegistryServiceConnection: 'challenge-devops'
   imageRepository: 'app1pythonaks'
   containerRegistry: 'acrdevopschall.azurecr.io'
   dockerfilePath: '**/Dockerfile'
@@ -57,7 +57,7 @@ stages:
       name: demo
       demands:
       - agent.name -equals demo  
-    environment: 'demo'
+    environment: 'demo.app1'
     strategy:
       runOnce:
         deploy:
