@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"aks","Source":"./modules/aks","Dir":""},{"Key":"helm","Source":"./modules/helm","Dir":""},{"Key":"network","Source":"./modules/network","Dir":""},{"Key":"resource_group","Source":"./modules/resource_group","Dir":""},{"Key":"service_pricipal","Source":"./modules/service_pricipal","Dir":""}]}
