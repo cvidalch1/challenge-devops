@@ -11,7 +11,7 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '569fbdc4-eae7-48e7-a717-a723d2ae03ce'
+  dockerRegistryServiceConnection: 'bbd0195b-5a8c-4be1-975b-50cdf375a563'
   imageRepository: 'app1pythonaks'
   containerRegistry: 'acrdevopschall.azurecr.io'
   dockerfilePath: '**/Dockerfile'
