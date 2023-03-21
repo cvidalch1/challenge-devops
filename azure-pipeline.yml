@@ -57,7 +57,7 @@ stages:
       name: demo
       demands:
       - agent.name -equals demo  
-    environment: 'demo.default'
+    environment: 'demo'
     strategy:
       runOnce:
         deploy:
