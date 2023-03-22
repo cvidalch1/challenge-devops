@@ -42,10 +42,10 @@ Git repository using command:
 ```
 
 2. Deploy Pipelines
-First you need to create a service connection to docker and aks for the deployment. (Note: if you don't have parallelism, it is possible to install a self-hosted agent on-premises)
-Modify pipeline if you don't use parallelism
+First you need to create a service connection to docker and aks for the deployment. (Note: if you don't have parallelism, it is possible to install a self-hosted agent on-premises).
+Modify pipeline if you don't use parallelism.
 
-Line 31 and 32 and uncomment line 20
+Replace Line 31 and 32 and uncomment line 20
 
 ```
     pool:
