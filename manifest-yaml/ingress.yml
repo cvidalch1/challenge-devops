@@ -5,20 +5,12 @@ metadata:
   namespace: challenge-devops
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    # nginx.ingress.kubernetes.io/use-regex: "true"
-    # nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
-      # - path: /devops(/|$)(.*)
-      #   pathType: Prefix
-      #   backend:
-      #     service:
-      #       name: challenge-devops
-      #       port: 
-      #         number: 80
+
       - path: /DevOps
         pathType: Prefix
         backend:
