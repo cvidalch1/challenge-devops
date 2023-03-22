@@ -1,0 +1,29 @@
+openapi: 3.0.1
+info:
+  title: challenge
+  description: ''
+  version: '1.0'
+servers:
+  - url: http://apim-devops-15.azure-api.net/DevOps
+  - url: https://apim-devops-15.azure-api.net/DevOps
+paths:
+  /:
+    post:
+      summary: devops
+      operationId: devops
+      responses:
+        '200':
+          description: 
+components:
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      name: X-JWT-KWY
+      in: header
+    apiKeyQuery:
+      type: apiKey
+      name: subscription-key
+      in: query
+security:
+  - apiKeyHeader: [ ]
+  - apiKeyQuery: [ ]

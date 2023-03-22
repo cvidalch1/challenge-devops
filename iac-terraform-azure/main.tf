@@ -44,7 +44,7 @@ module "service_principal" {
     source                              =  "./modules/service_principal"
     role_definition_name                =  "Contributor"
     rotation_days                       =  365
-    name                                =  "sp-devops"
+    name                                =  "sp-devops-1"
 
 }
 
@@ -99,18 +99,18 @@ module "helm" {
     depends_on                          =  [module.aks]
 }
 
-# module "apim" {
-#     source                              =  "./modules/apim"
-#     depends_on                          =  [module.network]
-#     resource_group_name                 =  module.resource_group.name
-#     apim_name                           =  "apim-devops-13"
-#     apim_publisher_name                 =  "devops"
-#     apim_publisher_email                =  "christian.vidalch@gmail.com" 
-#     sku_name                            =  "Developer_1" 
-#     virtual_network_type                =  "External"
-#     name_puip                           =  "puip-devops"
-#     domain_name_label                   =  "devops-challenge"
-#     subnet_id                           =  module.network.subnets[1]
-# }
+module "apim" {
+    source                              =  "./modules/apim"
+    depends_on                          =  [module.network]
+    resource_group_name                 =  module.resource_group.name
+    apim_name                           =  "apim-devops-15"
+    apim_publisher_name                 =  "devops"
+    apim_publisher_email                =  "christian.vidalch@gmail.com" 
+    sku_name                            =  "Developer_1" 
+    virtual_network_type                =  "External"
+    name_puip                           =  "puip-devops"
+    domain_name_label                   =  "devops-challenge"
+    subnet_id                           =  module.network.subnets[1]
+}
 
 

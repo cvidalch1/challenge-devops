@@ -15,7 +15,7 @@ resource "azurerm_public_ip" "main" {
   domain_name_label   = var.domain_name_label
 }
 
-resource "azurerm_api_management" "example" {
+resource "azurerm_api_management" "main" {
   name                = var.apim_name
   resource_group_name = data.azurerm_resource_group.main.name
   location            = data.azurerm_resource_group.main.location

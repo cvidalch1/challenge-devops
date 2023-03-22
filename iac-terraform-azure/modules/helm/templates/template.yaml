@@ -1,7 +1,7 @@
 
 controller:
   service:
-    #loadBalancerIP: 10.0.1.20
+    #loadBalancerIP: 10.0.1.100
     annotations:
       service.beta.kubernetes.io/azure-load-balancer-internal: "true"
       #service.beta.kubernetes.io/azure-load-balancer-internal-subnet: "subnet-aks"

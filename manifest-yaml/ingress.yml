@@ -1,7 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: demo
+  name: challenge-devops
+  namespace: challenge-devops
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     # nginx.ingress.kubernetes.io/use-regex: "true"
@@ -15,13 +16,13 @@ spec:
       #   pathType: Prefix
       #   backend:
       #     service:
-      #       name: demo
+      #       name: challenge-devops
       #       port: 
       #         number: 80
       - path: /DevOps
         pathType: Prefix
         backend:
           service:
-            name: demo
+            name: challenge-devops
             port:
               number: 80

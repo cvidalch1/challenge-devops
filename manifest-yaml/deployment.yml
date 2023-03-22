@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo  
+  name: challenge-devops
+  namespace: challenge-devops
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo
+      app: challenge-devops
   template:
     metadata:
       labels:
-        app: demo
+        app: challenge-devops
     spec:
       containers:
-      - name: demo
-        image: christianvch/challenge-devops:v5
+      - name: challenge-devops
+        image: docker pull acrdevopschall.azurecr.io/app1pythonaks:11
         ports:
         - containerPort: 80

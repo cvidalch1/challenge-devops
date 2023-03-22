@@ -8,29 +8,23 @@ resource "kubernetes_namespace" "main" {
   }
 }
 
+resource "kubernetes_namespace" "app" {
+  metadata {
+    labels = {
+      mylabel = "label-value"
+    }
+
+    name = "challenge-devops"
+  }
+}
+
+
 resource "helm_release" "nginx-ingress" {
-  name       = "nginx-ingress"
-  repository = "https://helm.nginx.com/stable"
-  chart      = "nginx-ingress"
+  name       = "ingress-nginx"
+  repository = "https://kubernetes.github.io/ingress-nginx"
+  chart      = "ingress-nginx"
   namespace        = "ingress-basic"
   create_namespace = true
   dependency_update          = true 
-  #values = [file("${path.module}/templates/template.yaml")]
-  set {
-    name  = "rbac.create"
-    value = "false"
+  values = [file("${path.module}/templates/template.yaml")]
   }
-
-  set {
-    name  = "controller.service.loadBalancerIP"
-    value = "10.0.1.20"
-  }
-  set {
-    name  = "controller.service.annotations.service\\.beta\\.kubernetes\\.io/azure-load-balancer-internal"
-    value = "true"
-  }
-  set {
-    name  = "controller.service.annotations.service\\.beta\\.kubernetes\\.io/azure-load-balancer-internal-subnet"
-    value = "subnet-aks"
-  }
-}
