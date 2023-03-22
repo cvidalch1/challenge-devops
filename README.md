@@ -14,7 +14,7 @@ Automatizacion en terraform:
 
 Manifiestos de kubernetes:
 
-- Archivo deployment, service e ingress.
+- Archivo deployment, autoscaling automatic, service e ingress.
 
 Pipeline:
 - Build and deploy image in AKS
