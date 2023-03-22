@@ -1,7 +1,7 @@
 # Pipeline to Build, Push and deploy APP in AKS.
 
 trigger:
-- main
+- main #Env production
 
 resources:
 - repo: self
