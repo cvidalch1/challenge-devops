@@ -42,18 +42,17 @@ Git repository using command:
 ```
 
 2. Deploy Pipelines
-Firts you need create a service connection between docker and aks for deployment. (Note: If you don't have parallelism it's posible install a self-hosted agend on-premise)
+First you need to create a service connection to docker and aks for the deployment. (Note: if you don't have parallelism, it is possible to install a self-hosted agent on-premises)
 
 After that you can run the Pipelines
 
 3. Publish API in API Management
-Using "challenge.openapi.yaml" you can import. To connect http URL ingress
-Use the next command to get IP loadbalancer internal.
+Using "challenge.openapi.yaml" you can import it. To use the ingress as a backend use the following command to get the internal IP load balancer:
 
 ```
 # kubectl get svc -n ingress-controller | grep LoadBalancer | awk '{print $4}'
 ```
-The output show IP private and put in API Management.
+The output shows the private IP and is placed in API Management.
 
 4. Test connection
 Using postman or curl you can test. Example:
