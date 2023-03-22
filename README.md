@@ -52,7 +52,7 @@ Replace Line 31 and 32 and uncomment line 20
       vmImage: $(vmImageName)
 ```
 
-After that you can run the Pipelines
+Then you are ready to run Pipelines
 
 3. Publish API in API Management
 Using "challenge.openapi.yaml" you can import it. To use the ingress as a backend use the following command to get the internal IP load balancer:
